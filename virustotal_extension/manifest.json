@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "VirusTotal URL Scanner",
+  "version": "1.1",
+  "description": "Sends the current tab's URL or right-clicked links to VirusTotal for a security scan.",
+  "icons": {
+    "48": "icons/vt-48.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "notifications",
+    "https://www.virustotal.com/*",
+    "contextMenus"
+  ],
+  "browser_action": {
+    "default_icon": "icons/vt-48.png",
+    "default_popup": "popup/popup.html",
+    "default_title": "Scan with VirusTotal"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
